@@ -9,6 +9,12 @@ from progress.bar import Bar
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+# Making sure Yaml understand how to represent a defaultdict
+from collections import defaultdict
+from yaml.representer import Representer
+
+yaml.add_representer(defaultdict, Representer.represent_dict)
+
 # read config
 with open("config.yml") as file:
     config = yaml.load(file, Loader=yaml.Loader)
@@ -180,58 +186,19 @@ def generate_yaml(devices, filename=file_path):
     #    devices = json.load(file)
     #########################################
 
-    inventory = {
-    "all": {
-        "children": {}
-        }
-    }
+    def nested_default():
+        return defaultdict(dict)
+    
+    inventory = defaultdict(dict)
+    inventory["all"]["children"] = defaultdict(nested_default)
 
-    ##################### Yes it's ugly and I should refactor it. #################
     for device in devices:
         name, ip, device_type, location = (
         device["name"], device["ip"], device["device_type"].lower(), device["location"]
         )
 
-        #build location entry
-        if not location in inventory["all"]["children"]:
-            inventory["all"]["children"][location] = {}
-        if not "hosts" in inventory["all"]["children"][location]:
-            inventory["all"]["children"][location]["hosts"] = {}
-        if not name in inventory["all"]["children"][location]["hosts"]:
-            inventory["all"]["children"][location]["hosts"][name] = {}
-        if not "ansible_host" in inventory["all"]["children"][location]["hosts"][name]:
-            inventory["all"]["children"][location]["hosts"][name]["ansible_host"] = ip       
-        
-        #build device entry
-        if not device_type in inventory["all"]["children"]:
-            inventory["all"]["children"][device_type] = {}
-        if not "hosts" in inventory["all"]["children"][device_type]:
-            inventory["all"]["children"][device_type]["hosts"] = {}
-        if not name in inventory["all"]["children"][device_type]["hosts"]:
-            inventory["all"]["children"][device_type]["hosts"][name] = {}
-        if not "ansible_host" in inventory["all"]["children"][device_type]["hosts"][name]:
-            inventory["all"]["children"][device_type]["hosts"][name]["ansible_host"] = ip   
-
-
-
-        # leaving this here temporarily - delete when we're happy with the data model.
-        # if not location in inventory["all"]["children"]:
-        #     inventory["all"]["children"][location] = {}
-        
-        # if not "children" in inventory["all"]["children"][location]:
-        #     inventory["all"]["children"][location]["children"] = {}
-
-        # if not device_type in inventory["all"]["children"][location]["children"]:
-        #     inventory["all"]["children"][location]["children"][device_type] = {}
-        
-        # if not "hosts" in inventory["all"]["children"][location]["children"][device_type]:
-        #     inventory["all"]["children"][location]["children"][device_type]["hosts"] = {}
-        
-        # if not name in inventory["all"]["children"][location]["children"][device_type]["hosts"]:
-        #     inventory["all"]["children"][location]["children"][device_type]["hosts"][name] = {}
-        
-        # if not "ansible_host" in inventory["all"]["children"][location]["children"][device_type]["hosts"][name]:
-        #     inventory["all"]["children"][location]["children"][device_type]["hosts"][name]["ansible_host"] = ip
+        inventory["all"]["children"][location]["hosts"][name] = {"ansible_host": ip}
+        inventory["all"]["children"][device_type]["hosts"][name] = {"ansible_host": ip}
 
     print(f"\n \n **** Writing inventory to disk at location: {filename}. time: {datetime.now()} ****")
 
