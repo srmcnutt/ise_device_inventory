@@ -1,0 +1,9 @@
+---
+# extractor retrieves up to 1000 devices by default.
+# to increase the limit, set page_limit by a
+# multiple of 20.  i.e. 100 pages * 20 = 2,000 devices.
+
+ise_node: "ise"
+file_path: "hosts.yml"
+page_limit: 50
+

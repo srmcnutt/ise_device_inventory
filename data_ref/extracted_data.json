@@ -1,0 +1,51 @@
+[
+    {
+        "id": "f025b230-4b2b-11e9-acf5-4ad41af2b2cf",
+        "ip": "10.10.20.40",
+        "name": "CentOS",
+        "device_type": "servers",
+        "location": "DC01"
+    },
+    {
+        "id": "f5a356f0-4b20-11e9-8686-005056bb05c0",
+        "ip": "127.0.0.1",
+        "name": "ISE_EST_Local_Host",
+        "device_type": "none_type",
+        "location": "none_location"
+    },
+    {
+        "id": "7dbeb9e0-641e-11eb-8649-e64ad47b17f1",
+        "ip": "10.0.0.1",
+        "name": "nx01",
+        "device_type": "nexus_switches",
+        "location": "DC01"
+    },
+    {
+        "id": "1448bd80-641e-11eb-8649-e64ad47b17f1",
+        "ip": "10.10.10.1",
+        "name": "r1",
+        "device_type": "routers",
+        "location": "branch1"
+    },
+    {
+        "id": "2ba34950-641e-11eb-8649-e64ad47b17f1",
+        "ip": "10.10.2.2",
+        "name": "r2",
+        "device_type": "routers",
+        "location": "branch2"
+    },
+    {
+        "id": "41816e50-641e-11eb-8649-e64ad47b17f1",
+        "ip": "10.10.10.10",
+        "name": "sw1",
+        "device_type": "switches",
+        "location": "branch1"
+    },
+    {
+        "id": "57e67690-641e-11eb-8649-e64ad47b17f1",
+        "ip": "10.10.2.20",
+        "name": "sw2",
+        "device_type": "switches",
+        "location": "branch2"
+    }
+]

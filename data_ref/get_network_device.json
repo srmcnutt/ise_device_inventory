@@ -1,0 +1,35 @@
+{
+  "NetworkDevice" : {
+    "id" : "7dbeb9e0-641e-11eb-8649-e64ad47b17f1",
+    "name" : "nx01",
+    "description" : "",
+    "authenticationSettings" : {
+      "networkProtocol" : "RADIUS",
+      "radiusSharedSecret" : "cisco123",
+      "enableKeyWrap" : false,
+      "dtlsRequired" : false,
+      "keyEncryptionKey" : "",
+      "messageAuthenticatorCodeKey" : "",
+      "keyInputFormat" : "ASCII",
+      "enableMultiSecret" : "false"
+    },
+    "tacacsSettings" : {
+      "sharedSecret" : "cisco123",
+      "connectModeOptions" : "OFF",
+      "previousSharedSecret" : "",
+      "previousSharedSecretExpiry" : 0
+    },
+    "profileName" : "Cisco",
+    "coaPort" : 1700,
+    "link" : {
+      "rel" : "self",
+      "href" : "https://10.10.20.70:9060/ers/config/networkdevice/7dbeb9e0-641e-11eb-8649-e64ad47b17f1",
+      "type" : "application/xml"
+    },
+    "NetworkDeviceIPList" : [ {
+      "ipaddress" : "10.0.0.1",
+      "mask" : 32
+    } ],
+    "NetworkDeviceGroupList" : [ "Location#All Locations#DC01", "IPSEC#Is IPSEC Device#No", "Device Type#All Device Types#nexus_switches" ]
+  }
+}

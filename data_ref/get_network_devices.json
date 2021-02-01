@@ -1,0 +1,69 @@
+{
+  "SearchResult" : {
+    "total" : 7,
+    "resources" : [ {
+      "id" : "f025b230-4b2b-11e9-acf5-4ad41af2b2cf",
+      "name" : "CentOS",
+      "description" : "MUD Cent OS Server",
+      "link" : {
+        "rel" : "self",
+        "href" : "https://10.10.20.70:9060/ers/config/networkdevice/f025b230-4b2b-11e9-acf5-4ad41af2b2cf",
+        "type" : "application/xml"
+      }
+    }, {
+      "id" : "f5a356f0-4b20-11e9-8686-005056bb05c0",
+      "name" : "ISE_EST_Local_Host",
+      "description" : "",
+      "link" : {
+        "rel" : "self",
+        "href" : "https://10.10.20.70:9060/ers/config/networkdevice/f5a356f0-4b20-11e9-8686-005056bb05c0",
+        "type" : "application/xml"
+      }
+    }, {
+      "id" : "7dbeb9e0-641e-11eb-8649-e64ad47b17f1",
+      "name" : "nx01",
+      "description" : "",
+      "link" : {
+        "rel" : "self",
+        "href" : "https://10.10.20.70:9060/ers/config/networkdevice/7dbeb9e0-641e-11eb-8649-e64ad47b17f1",
+        "type" : "application/xml"
+      }
+    }, {
+      "id" : "1448bd80-641e-11eb-8649-e64ad47b17f1",
+      "name" : "r1",
+      "description" : "",
+      "link" : {
+        "rel" : "self",
+        "href" : "https://10.10.20.70:9060/ers/config/networkdevice/1448bd80-641e-11eb-8649-e64ad47b17f1",
+        "type" : "application/xml"
+      }
+    }, {
+      "id" : "2ba34950-641e-11eb-8649-e64ad47b17f1",
+      "name" : "r2",
+      "description" : "",
+      "link" : {
+        "rel" : "self",
+        "href" : "https://10.10.20.70:9060/ers/config/networkdevice/2ba34950-641e-11eb-8649-e64ad47b17f1",
+        "type" : "application/xml"
+      }
+    }, {
+      "id" : "41816e50-641e-11eb-8649-e64ad47b17f1",
+      "name" : "sw1",
+      "description" : "",
+      "link" : {
+        "rel" : "self",
+        "href" : "https://10.10.20.70:9060/ers/config/networkdevice/41816e50-641e-11eb-8649-e64ad47b17f1",
+        "type" : "application/xml"
+      }
+    }, {
+      "id" : "57e67690-641e-11eb-8649-e64ad47b17f1",
+      "name" : "sw2",
+      "description" : "",
+      "link" : {
+        "rel" : "self",
+        "href" : "https://10.10.20.70:9060/ers/config/networkdevice/57e67690-641e-11eb-8649-e64ad47b17f1",
+        "type" : "application/xml"
+      }
+    } ]
+  }
+}
