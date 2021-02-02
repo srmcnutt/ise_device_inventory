@@ -33,9 +33,9 @@ Before you can fire up the tool you'll need to complete this short checklist:
 - in the config.yml, change the name of the ise_node to the address of the
     server you wrote down above.  you can also set the ISE_NODE environment variable instead.
 
-- (optional) configure the file_path setting in config.yml or setting the ISE_PATH environment variable 
+- (optional) configure the file_path setting in config.yml or setting the ISE_PATH environment variable. 
 
-- (optional) if you have more than 1000 devices increase the page_limit in config.yml or set the ISE_PAGE_LIMIT envrionment variable
+- (optional) if you have more than 1000 devices increase the page_limit in config.yml or set the ISE_PAGE_LIMIT envrionment variable.
 
 - (optional) set the ISE_USER and ISE_PASSWORD environment variables for unnatended operation such as part of a pipeline.  if you don't set these the tool will prompt for the information.
 
