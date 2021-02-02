@@ -17,13 +17,10 @@
 This tool extracts all of your devices from ISE
 and creates an Ansible compatible YAML inventory file
 
-1. Housekeeping and setup
-2. how to use it
-3. caveats, etc.
 
 ---------------------------------------------------------------------------
 
-1. Housekeeping and setup
+# Installation and setup
 
 before you can fire up the tool you'll need to complete this short checklist:
 
@@ -46,7 +43,7 @@ before you can fire up the tool you'll need to complete this short checklist:
 
 ---------------------------------------------------------------------------
 
-2. how to use it.
+# Usage
 
 - type:" python3 main.py". The program will connect to ISE and start downloading the
     device inventory.
@@ -54,19 +51,25 @@ before you can fire up the tool you'll need to complete this short checklist:
 - once ISE device extractor has processed the data, you'll see a "writing inventory to disk" message.
   at that point you are done.
 ---------------------------------------------------------------------------
-3. caveats, etc.
+
+# Caveats and things to note
 
 - the tool will build an inventory with a group per location and per device type.  You can combine them in Ansible with a host pattern.  For example dc01:&routers would select all of the routers at site dc01.  Check the Ansible documentation for further details.
 
 - ansible inventory files cannot have whitespace or dashes in group names.  The tool will replace the location and device_type
     fields that have these characters with an underbar (_).
 
-- if you want to contribute or modify the program, there are some sample data structures in the data_ref folder to work with.
-
 - all configurables can set as environment variables for automation use.
 
 - no, you cannot store the username or password in the config file.
+------------------------------------------------------------------------------
 
-- garbage in, garbage out.  If your ISE hygiene is poor you're going to get a crappy inventory file. I know people don't 
-    like having their baby called ugly but sometimes we have to embrace these awkward moments for the greater good.
+# Contributing and modifying
+
+- If you would like to contribute or modify the program, there are some sample data structures in the data_ref folder to get you started.
+  
+- The samples were generated in an ISE development sandbox at https://devnetsandbox.cisco.com 
+
+
+
 
