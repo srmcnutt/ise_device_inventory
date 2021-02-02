@@ -56,8 +56,7 @@ Before you can fire up the tool you'll need to complete this short checklist:
 
 - the tool will build an inventory with a group per location and per device type.  You can combine them in Ansible with a host pattern.  For example dc01:&routers would select all of the routers at site dc01.  Check the Ansible documentation for further details.
 
-- Ansible inventory files cannot have whitespace or dashes in group names.  The tool will replace the location and device_type
-    fields that have these characters with an underbar (_).
+- Ansible inventory files cannot have whitespace or dashes in group names.  The tool will replace the location and device_type fields that have these characters with an underbar (_).
 
 - All configurables can set as environment variables for automation use.
 
