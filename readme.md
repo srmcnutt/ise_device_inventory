@@ -45,7 +45,7 @@ Before you can fire up the tool you'll need to complete this short checklist:
 
 # Usage
 
-- type:" python3 main.py". The program will connect to ISE and start downloading the
+- type:"python3 main.py". The program will connect to ISE and start downloading the
     device inventory.
 
 - once ISE device extractor has processed the data, you'll see a "writing inventory to disk" message.
@@ -56,12 +56,12 @@ Before you can fire up the tool you'll need to complete this short checklist:
 
 - the tool will build an inventory with a group per location and per device type.  You can combine them in Ansible with a host pattern.  For example dc01:&routers would select all of the routers at site dc01.  Check the Ansible documentation for further details.
 
-- ansible inventory files cannot have whitespace or dashes in group names.  The tool will replace the location and device_type
+- Ansible inventory files cannot have whitespace or dashes in group names.  The tool will replace the location and device_type
     fields that have these characters with an underbar (_).
 
-- all configurables can set as environment variables for automation use.
+- All configurables can set as environment variables for automation use.
 
-- no, you cannot store the username or password in the config file.
+- No, you cannot store the username or password in the config file.
 ------------------------------------------------------------------------------
 
 # Contributing and modifying
