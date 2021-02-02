@@ -15,14 +15,14 @@
 ```
 
 This tool extracts all of your devices from ISE
-and creates an Ansible compatible YAML inventory file
+and creates an Ansible compatible YAML inventory file.
 
 
 ---------------------------------------------------------------------------
 
 # Installation and setup
 
-before you can fire up the tool you'll need to complete this short checklist:
+Before you can fire up the tool you'll need to complete this short checklist:
 
 - enable ERS in ISE
 
