@@ -28,7 +28,7 @@ before you can fire up the tool you'll need to complete this short checklist:
 
 - write down the hostname of node that's hosting the ERS api on the ERS page
 
-- create an account with ers readonly rights
+- create an account with ers operator rights
 
 - in the config.yml, change the name of the ise_node to the address of the
     server you wrote down above.  you can also set the ISE_NODE environment variable instead.
