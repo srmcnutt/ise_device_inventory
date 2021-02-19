@@ -1,3 +1,5 @@
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/srmcnutt/ise_device_inventory)
+
 ```
    __   ___                               
 | /__` |__                                
@@ -88,7 +90,7 @@ variables first, and if those are not present you'll get an interactive prompt w
 The following is the list of environment variables Device Extractor looks for at startup:
 
 * ISE_NODE - the host name or ip address of ISE
-* ISE_PATH - the path where would like the output file to be written
+* ISE_PATH - the path and file name where would like the output file to be written
 * ISE_PAGE_LIMIT - the number of pages Device extractor will read before giving up
 * ISE_USER - an ISE user with ERS Opertator rights
 * ISE_PASSWORD - the password for the ISE_USER
